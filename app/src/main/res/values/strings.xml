@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Films</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_film_detail">FilmDetailActivity</string>
+    <string name="apiKey">967c9109162248035267dc766abca7fd</string>
+    <string name="connection_get_format">application/json</string>
+
+    <string name="pref_sort_label_popular">Popular</string>
+
+    <string name="pref_sort_label_top_rated">Top Rated</string>
+
+    <string name="pref_sort_key" translatable="false">sort</string>
+
+    <string name="pref_sort_label">Sort By</string>
+
+    <string name="pref_sort_popular" translatable="false">popular</string>
+
+    <string name="pref_sort_url_top_rated" translatable="false">top_rated</string>
+
+    <string name="pref_sort_top_rated" translatable="false">top_rated</string>
+
+    <string name="button_add_fav" translatable="false">Add as Favorite</string>
+
+    <string name="film_poster_size">w185</string>
+
+</resources>

@@ -69,7 +69,7 @@
                 android:textColor="#CDCDCD"
                 android:text="@string/button_add_fav"
                 android:textSize="12sp"
-                android:id="@+id/button_fav" />
+                android:id="@+id/button_fav"/>
 
         </LinearLayout>
 

@@ -16,7 +16,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -108,10 +107,6 @@ public class FilmsFragment extends Fragment {
                 Film film = mFilmAdapter.getItem(position);
                 Intent intent = new Intent(getActivity(), FilmDetailActivity.class)
                         .putExtra("THE_FILM", film);
-
-                Toast.makeText(getActivity(), "" + position,
-                        Toast.LENGTH_SHORT).show();
-
                 startActivity(intent);
             }
         });

@@ -8,8 +8,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -34,9 +36,9 @@ public class FilmDetailFragment extends Fragment {
 
         // The detail Activity called via intent.  Inspect the intent for forecast data.
         Intent intent = getActivity().getIntent();
-        Film film;
+
         if (intent != null && intent.hasExtra("THE_FILM")) {
-            mFilm = (Film) intent.getParcelableExtra("THE_FILM");
+            mFilm = intent.getParcelableExtra("THE_FILM");
 
             String picassoUrl = IMAGE_BASE_URL + getString(R.string.film_poster_size) + mFilm.poster;
 
@@ -44,10 +46,21 @@ public class FilmDetailFragment extends Fragment {
             ((TextView) rootView.findViewById(R.id.film_detail_title)).setText(mFilm.title);
 
             Picasso.with(getActivity()).load(picassoUrl).into(
-                                    (ImageView) rootView.findViewById(R.id.film_detail_poster) );
+                    (ImageView) rootView.findViewById(R.id.film_detail_poster));
             ((TextView) rootView.findViewById(R.id.film_detail_release)).setText(mFilm.release);
             ((TextView) rootView.findViewById(R.id.film_detail_rating)).setText(mFilm.rating + "/10");
             ((TextView) rootView.findViewById(R.id.film_detail_overview)).setText(mFilm.overview);
+
+            Button btn = (Button) rootView.findViewById(R.id.button_fav);
+
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(getActivity(), "HA! You wish!",
+                            Toast.LENGTH_SHORT).show();
+                }
+            });
+
         }
 
         return rootView;
